@@ -63,12 +63,15 @@ module.exports = {
       }, {
         type: 'input',
         name: 'scope',
-        message: 'Denote the scope of this change ($location, $browser, $compile, etc.):\n'
+        message: 'Denote the scope of this change (action-sheet, animations, cards, config, etc.):\n'
       }, {
         type: 'input',
         name: 'subject',
-        message: 'Write a short, imperative tense description of the change:\n',
+        message: 'Write a short description of the change:\n',
         filter: function(value) {
+          if (value.slice(-1) == '.') {
+            value = value.substring(0, value.length - 1);
+          }
           return value.charAt(0).toLowerCase() + value.slice(1);
         }
       }, {
@@ -78,7 +81,7 @@ module.exports = {
       }, {
         type: 'input',
         name: 'footer',
-        message: 'List any breaking changes or issues closed by this change:\n'
+        message: 'List any breaking changes or issues closed by this change (e.g references #5077, closes #5077, etc.):\n'
       }
     ], function(answers) {
 
