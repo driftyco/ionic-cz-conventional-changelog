@@ -1,6 +1,6 @@
 {
   "name": "ionic-cz-conventional-changelog",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Commitizen adapter following the conventional-changelog format.",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,7 @@
   "author": "Ionic <hi@ionic.io>",
   "license": "MIT",
   "dependencies": {
+    "colors": "^1.1.2",
     "word-wrap": "^1.0.3"
   },
   "devDependencies": {
